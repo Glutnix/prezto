@@ -11,3 +11,37 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PROMPT="$PROMPT\$(~/.git-radar/git-radar --zsh --fetch) "
+export EDITOR="atom --new-window --wait"
+alias edit="$EDITOR"
+
+if [[ -s "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh"
+fi
+
+# Who doesn't want home and end to work?
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+
+# Incremental search is elite!
+bindkey -M vicmd "/" history-incremental-search-backward
+bindkey -M vicmd "?" history-incremental-search-forward
+
+# Search based on what you typed in already
+bindkey -M vicmd "//" history-beginning-search-backward
+bindkey -M vicmd "??" history-beginning-search-forward
+
+bindkey "\eOP" run-help
+
+# oh wow!  This is killer...  try it!
+bindkey -M vicmd "q" push-line
+
+# it's like, space AND completion.  Gnarlbot.
+bindkey -M viins ' ' magic-space
+
+alias artisan='php artisan'
+
+alias phpserve='php -S localhost:7999'
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'

@@ -47,7 +47,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   $home/bin
-  /usr/local/Cellar/node/0.12.7_1/libexec/npm/bin/
+  /usr/local/Cellar/node/0.12.7_1/libexec/npm/bin
   $home/.composer/vendor/bin
   $path
   ~/ruby/gems/bin

@@ -12,10 +12,6 @@ fi
 
 # Customize to your needs...
 
-export PROMPT="$PROMPT\$(~/.git-radar/git-radar --zsh --fetch) "
-export EDITOR="atom --new-window --wait"
-alias edit="$EDITOR"
-
 if [[ -s "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh"
 fi

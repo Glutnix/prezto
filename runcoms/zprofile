@@ -17,9 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR="atom --new-window --wait"
+export VISUAL=$EDITOR
 export PAGER='less'
+
+alias edit="$EDITOR"
 
 #
 # Language

@@ -35,11 +35,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'ssh' \
-  'tmux' \
   'completion' \
   'homebrew' \
   'osx' \
   'gpg' \
+  'git' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'

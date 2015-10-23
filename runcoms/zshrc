@@ -19,8 +19,21 @@ fi
 . `brew --prefix`/etc/profile.d/z.sh
 
 # Who doesn't want home and end to work?
-bindkey '\e[1~' beginning-of-line
-bindkey '\e[4~' end-of-line
+
+# Skip forward/back a word with opt-arrow
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+
+# Skip to start/end of line with cmd-arrow
+bindkey '[E' beginning-of-line
+bindkey '[F' end-of-line
+
+# Delete word with opt-backspace/opt-delete
+bindkey '[G' backward-kill-word
+bindkey '[H' kill-word
+
+# Delete line with cmd-backspace
+bindkey '[I' kill-whole-line
 
 alias t=trash
 alias rm=trash

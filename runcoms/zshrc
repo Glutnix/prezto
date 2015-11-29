@@ -40,8 +40,11 @@ alias rm=trash
 
 alias artisan='php artisan'
 
+alias phpspec='vendor/bin/phpspec'
+alias phpunit='vendor/bin/phpunit'
+
 alias phpserve='php -S localhost:7999'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
 
-eval "$(docker-machine env default)"
+# eval "$(docker-machine env default)"

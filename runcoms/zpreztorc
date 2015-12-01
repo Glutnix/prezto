@@ -40,7 +40,7 @@ zstyle ':prezto:load' pmodule \
   'osx' \
   'gpg' \
   'git' \
-  'iterm2' \
+  'iterm2-tabs' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
@@ -101,11 +101,28 @@ zstyle ':prezto:module:history-substring-search:color' not-found ''
 zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
-# macOS
+# iTerm2 Tabs
 #
 
-# Set the keyword used by `mand` to open man pages in Dash.app
-# zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
+# List regexps that when match commands will color the tab appropriately.
+zstyle ':prezto:module:iterm2' danger \
+  "^ssh(.*)prod" \
+  "^sudo "
+
+zstyle ':prezto:module:iterm2' warning \
+  "^ssh(.*)(stag)|(test)" \
+  "^vagrant ssh" \
+
+zstyle ':prezto:module:iterm2' safe \
+  "^ssh(.*)local" \
+  "^ssh(.*)dev" \
+  "^ssh(.*)(::0)|(127.0.0.1)" \
+
+zstyle ':prezto:module:iterm2' info \
+  "^ssh"
+
+# If no color is applied above, dim the tab while a command is running.
+zstyle ':prezto:module:iterm2' dim-active-tabs 'yes'
 
 #
 # Pacman
@@ -180,21 +197,14 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
    'root'
 #
 # Set syntax highlighting styles.
-<<<<<<< HEAD
-# zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
-#   'function' 'bg=blue'
-#
-# Set syntax pattern styles.
-# zstyle ':prezto:module:syntax-highlighting' pattern \
-#   'rm*-rf*' 'fg=white,bold,bg=red'
-=======
-zstyle ':prezto:module:syntax-highlighting' styles \
+ zstyle ':prezto:module:syntax-highlighting' styles \
    'builtin' 'bg=blue' \
    'command' 'bg=blue' \
    'function' 'bg=blue'
->>>>>>> Add personal preferences
+
+ Set syntax pattern styles.
+ zstyle ':prezto:module:syntax-highlighting' pattern \
+   'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal

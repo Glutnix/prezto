@@ -12,11 +12,12 @@ fi
 
 # Customize to your needs...
 
+. `brew --prefix`/etc/profile.d/z.sh
+
 if [[ -s "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh" ]]; then
+  echo "namedir loaded."
   source "${ZDOTDIR:-$HOME}/lib/zsh-namedir/init.zsh"
 fi
-
-. `brew --prefix`/etc/profile.d/z.sh
 
 # Who doesn't want home and end to work?
 

@@ -107,6 +107,7 @@ zstyle ':prezto:module:history-substring-search' globbing-flags ''
 # List regexps that when match commands will color the tab appropriately.
 zstyle ':prezto:module:iterm2' danger \
   "^ssh(.*)prod" \
+  "^ssh(.*)common\.stqry\.com"
   "^sudo "
 
 zstyle ':prezto:module:iterm2' warning \
@@ -119,7 +120,9 @@ zstyle ':prezto:module:iterm2' safe \
   "^ssh(.*)(::0)|(127.0.0.1)" \
 
 zstyle ':prezto:module:iterm2' info \
-  "^ssh"
+  "^ssh" \
+  "php artisan serve" \
+  "php(.*)-S"
 
 # If no color is applied above, dim the tab while a command is running.
 zstyle ':prezto:module:iterm2' dim-active-tabs 'yes'

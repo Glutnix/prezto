@@ -51,8 +51,15 @@ path=(
   ~/.composer/vendor/bin
   $path
   ~/ruby/gems/bin
+  vendor/bin
+  node_modules/.bin
 )
 
+#
+# Environment
+#
+
+export GOPATH=$HOME/Sites/go
 
 #
 # Less

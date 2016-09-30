@@ -12,11 +12,6 @@ fi
 
 # Customize to your needs...
 
-if [[ -s "$HOME/lib/zsh-namedir/init.zsh" ]]; then
-  echo "namedir loaded."
-  source "$HOME/lib/zsh-namedir/init.zsh"
-fi
-
 . `brew --prefix`/etc/profile.d/z.sh
 
 # Who doesn't want home and end to work?
@@ -45,9 +40,18 @@ alias artisan='php artisan'
 #alias php='php -dzend_extension=xdebug.so'
 
 # PHPUnit needs xdebug for coverage. In this case, just make an alias with php command prefix.
-alias phpunit='php $(which phpunit)'
+#alias phpunit='php $(which phpunit)'
 
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
 
 # eval "$(docker-machine env default)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export NVM_DIR="/Users/STQRY9/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# added by travis gem
+[ -f /Users/STQRY9/.travis/travis.sh ] && source /Users/STQRY9/.travis/travis.sh
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

@@ -121,6 +121,7 @@ zstyle ':prezto:module:iterm2' safe \
 
 zstyle ':prezto:module:iterm2' info \
   "^ssh" \
+  "^(ssh )?sdf" \
   "php artisan serve" \
   "php(.*)-S"
 

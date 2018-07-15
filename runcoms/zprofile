@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR="vim"
+export EDITOR="code -w"
 export VISUAL=$EDITOR
 export PAGER='less'
 
@@ -46,12 +46,14 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $(brew --prefix homebrew/php/php56)/bin
+  $(brew --prefix node@6)/bin
   /usr/local/{bin,sbin}
   ~/bin
   ~/.composer/vendor/bin
   $path
   ~/ruby/gems/bin
   vendor/bin
+  ~/.yarn/bin
   node_modules/.bin
 )
 

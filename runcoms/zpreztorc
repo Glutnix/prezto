@@ -40,6 +40,7 @@ zstyle ':prezto:load' pmodule \
   'osx' \
   'gpg' \
   'git' \
+  'node' \
   'iterm2-tabs' \
   'syntax-highlighting' \
   'history-substring-search' \
